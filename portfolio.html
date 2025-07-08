@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+    <html lang="en">
+      <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <title>Portfolio | TechieBears Private Limited</title>
+        <link rel="icon" href="images/icon-tech.png" type="image/x-icon">
+        <!-- Bootstrap CSS -->
+        <link
+          href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+          rel="stylesheet"
+        />
+        <!-- Font Awesome for Social Icons -->
+        <link
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+          rel="stylesheet"
+        />
+        <!-- Google Fonts: Poppins -->
+        <link
+          href="https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap"
+          rel="stylesheet"
+        />
+        <link
+          href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@700;800&display=swap"
+          rel="stylesheet"
+        />
+        <link rel="stylesheet" href="css/style.css" />
+        <!-- <link rel="stylesheet" href="css/portfolio-style.css" /> -->
+      </head>
+      <body class="theme-colors use-theme">
+
+        <div class="loading" id="loading">
+          <div class="spinner"></div>
+      </div>
+  
+      <!-- Animated Background -->
+      <div class="animated-bg">
+          <div class="floating-shapes">
+              <div class="shape"></div>
+              <div class="shape"></div>
+              <div class="shape"></div>
+              <div class="shape"></div>
+          </div>
+      </div>
+        <!-- Navbar Start -->
+        <nav
+          class="navbar navbar-expand-lg navbar-light bg-white shadow-sm sticky-top"
+        >
+          <div class="container">
+            <!-- Logo -->
+            <a class="navbar-brand d-flex align-items-center" href="index.html">
+              <img src="images/logo.png" alt="Logo" />
+              <!-- <span class="fw-bold text-orange">TechieBears</span> -->
+            </a>
+
+            <!-- Toggler for Mobile -->
+            <button
+              class="navbar-toggler"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#navbarNav"
+            >
+              <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <!-- Centered Nav Menu -->
+            <div
+              class="collapse navbar-collapse justify-content-center"
+              id="navbarNav"
+            >
+              <ul class="navbar-nav">
+                <li class="nav-item dropdown">
+                  <a
+                    class="nav-link dropdown-toggle"
+                    href="#"
+                    data-bs-toggle="dropdown"
+                    >Discover</a
+                  >
+                  <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" href="about us.html">About Us</a></li>
+                    <li><a class="dropdown-item" href="portfolio.html">Portfolio</a></li>
+                  </ul>
+                </li>
+                <li class="nav-item dropdown">
+                  <a
+                    class="nav-link dropdown-toggle"
+                    href="services.html"
+                    data-bs-toggle="dropdown"
+                    >Services</a
+                  >
+                  <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" href="services.html">Services</a></li>
+                    <li><a class="dropdown-item" href="our team.html">Our Team</a></li>
+                  </ul>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="blogs.html">Blogs</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="contact us.html">Contact Us</a>
+                </li>
+              </ul>
+            </div>
+
+            <!-- Social Icons -->
+            <div class="d-none d-lg-flex social-icons">
+              <a href="#"><i class="fab fa-facebook-f"></i></a>
+              <a href="#"><i class="fab fa-instagram"></i></a>
+              <a href="#"><i class="fab fa-linkedin-in"></i></a>
+              <a href="#"><i class="fab fa-x-twitter"></i></a>
+            </div>
+          </div>
+        </nav>
+        <!-- Navbar End -->
+        <!-- banner section start -->
+        <section class="services-hero d-flex align-items-center">
+            <div class="container">
+              <h1 class="services-title">Portfolio</h1>
+              <nav aria-label="breadcrumb">
+                <ol class="breadcrumb custom-breadcrumb">
+                  <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+                  <li class="breadcrumb-separator">/</li>
+                  <li class="breadcrumb-item active" aria-current="page">Portfolio</li>
+                </ol>
+              </nav>
+            </div>
+          </section>
+        <!-- banner section end --> 
+           <!-- Portfolio Section -->
+    <section id="portfolio" class="section">
+      <div class="container">
+          <div class="section-title fade-in">
+              <h2>Our Portfolio</h2>
+              <p>Discover our diverse range of digital solutions crafted with precision and innovation</p>
+          </div>
+          
+          <div class="row">
+              <div class="col-lg-4 col-md-6">
+                  <div class="portfolio-card">
+                      <div class="portfolio-icon">
+                          <i class="fas fa-shopping-cart"></i>
+                      </div>
+                      <h3>E-commerce Solutions</h3>
+                      <p>Comprehensive online stores with seamless user experience, secure payment gateways, and advanced inventory management.</p>
+                      <div class="tech-tags">
+                          <span class="tech-tag">React</span>
+                          <span class="tech-tag">Node.js</span>
+                          <span class="tech-tag">MongoDB</span>
+                          <span class="tech-tag">Stripe</span>
+                      </div>
+                  </div>
+              </div>
+              
+              <div class="col-lg-4 col-md-6">
+                  <div class="portfolio-card">
+                      <div class="portfolio-icon">
+                          <i class="fas fa-globe"></i>
+                      </div>
+                      <h3>Web Applications</h3>
+                      <p>Custom web applications built with modern technologies, responsive design, and scalable architecture.</p>
+                      <div class="tech-tags">
+                          <span class="tech-tag">Vue.js</span>
+                          <span class="tech-tag">Laravel</span>
+                          <span class="tech-tag">PostgreSQL</span>
+                          <span class="tech-tag">AWS</span>
+                      </div>
+                  </div>
+              </div>
+              
+              <div class="col-lg-4 col-md-6">
+                  <div class="portfolio-card">
+                      <div class="portfolio-icon">
+                          <i class="fas fa-calendar-alt"></i>
+                      </div>
+                      <h3>Booking Systems</h3>
+                      <p>Intelligent booking and reservation systems with real-time availability, automated notifications, and analytics.</p>
+                      <div class="tech-tags">
+                          <span class="tech-tag">Angular</span>
+                          <span class="tech-tag">Express.js</span>
+                          <span class="tech-tag">MySQL</span>
+                          <span class="tech-tag">Socket.io</span>
+                      </div>
+                  </div>
+              </div>
+              
+              <div class="col-lg-4 col-md-6">
+                  <div class="portfolio-card">
+                      <div class="portfolio-icon">
+                          <i class="fas fa-mobile-alt"></i>
+                      </div>
+                      <h3>Mobile Applications</h3>
+                      <p>Native and cross-platform mobile apps with intuitive interfaces, optimal performance, and seamless integration.</p>
+                      <div class="tech-tags">
+                          <span class="tech-tag">React Native</span>
+                          <span class="tech-tag">Flutter</span>
+                          <span class="tech-tag">Firebase</span>
+                          <span class="tech-tag">Redux</span>
+                      </div>
+                  </div>
+              </div>
+              
+              <div class="col-lg-4 col-md-6">
+                  <div class="portfolio-card">
+                      <div class="portfolio-icon">
+                          <i class="fas fa-paint-brush"></i>
+                      </div>
+                      <h3>UI/UX Design</h3>
+                      <p>User-centered design solutions that combine aesthetics with functionality, creating memorable digital experiences.</p>
+                      <div class="tech-tags">
+                          <span class="tech-tag">Figma</span>
+                          <span class="tech-tag">Adobe XD</span>
+                          <span class="tech-tag">Sketch</span>
+                          <span class="tech-tag">Prototyping</span>
+                      </div>
+                  </div>
+              </div>
+              
+              <div class="col-lg-4 col-md-6">
+                  <div class="portfolio-card">
+                      <div class="portfolio-icon">
+                          <i class="fas fa-boxes"></i>
+                      </div>
+                      <h3>Inventory Management</h3>
+                      <p>Powerful inventory tracking systems with real-time monitoring, automated alerts, and comprehensive reporting.</p>
+                      <div class="tech-tags">
+                          <span class="tech-tag">Python</span>
+                          <span class="tech-tag">Django</span>
+                          <span class="tech-tag">Redis</span>
+                          <span class="tech-tag">Charts.js</span>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </section>
+
+  <!-- Stats Section -->
+  <section id="about" class="section-stats">
+      <div class="container">
+          <div class="stats fade-in">
+              <div class="row">
+                  <div class="col-lg-3 col-md-6">
+                      <div class="stat-item">
+                          <span class="stat-number" data-count="150">0</span>
+                          <p class="stat-label">Projects Completed</p>
+                      </div>
+                  </div>
+                  <div class="col-lg-3 col-md-6">
+                      <div class="stat-item">
+                          <span class="stat-number" data-count="98">0</span>
+                          <p class="stat-label">Client Satisfaction</p>
+                      </div>
+                  </div>
+                  <div class="col-lg-3 col-md-6">
+                      <div class="stat-item">
+                          <span class="stat-number" data-count="24">0</span>
+                          <p class="stat-label">Support Hours</p>
+                      </div>
+                  </div>
+                  <div class="col-lg-3 col-md-6">
+                      <div class="stat-item">
+                          <span class="stat-number" data-count="5">0</span>
+                          <p class="stat-label">Years Experience</p>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact" class="section">
+      <div class="container">
+          <div class="row justify-content-center">
+              <div class="col-lg-8">
+                  <div class="contact fade-in">
+                      <h2>Ready to Start Your Project?</h2>
+                      <p>Let's discuss how we can help bring your digital vision to life with our expertise and innovative solutions.</p>
+                      <a href="mailto:hello@techbears.com" class="cta-button">
+                          <i class="fas fa-envelope me-2"></i>
+                          Get In Touch
+                      </a>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </section>
+        <!-- section 8 start -->
+        <footer class="footer-section" aria-label="Footer">
+          <div class="footer-main">
+            <div class="footer-col footer-brand">
+              <img
+                src="images/whitelog.webp"
+                alt="TechieBears Logo"
+                class="footer-logo"
+              />
+              <p class="footer-tagline">
+                Revolutionize your<br />online world.
+              </p>
+            </div>
+            <nav class="footer-col footer-menu" aria-label="Footer Menu">
+              <h3>Menu</h3>
+              <ul>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="portfolio.html">Portfolio</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="knowledge-center.html">Knowledge Center</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+              </ul>
+            </nav>
+            <div class="footer-col footer-address">
+              <h3>Address</h3>
+              <address>
+                Techiebears Private Limited<br />
+                Office No. 632, EsseGee Option One,<br />
+                Senapati Bapat Marg,<br />
+                Dadar West, Parel, Mumbai,<br />
+                Maharashtra 400028.
+              </address>
+            </div>
+            <div class="footer-col footer-contact">
+              <h3>Contact Us</h3>
+              <ul>
+                <li>
+                  <i class="fas fa-phone"></i>
+                  <a href="tel:+919920402582">+91-9920402582</a>
+                </li>
+                <li>
+                  <i class="fas fa-envelope"></i>
+                  <a href="mailto:infor@techiebears.com"
+                    >infor@techiebears.com</a
+                  >
+                </li>
+                <li class="footer-socials">
+                  <a href="#" aria-label="Facebook"
+                    ><i class="fab fa-facebook-f"></i
+                  ></a>
+                  <a href="#" aria-label="Instagram"
+                    ><i class="fab fa-instagram"></i
+                  ></a>
+                  <a href="#" aria-label="LinkedIn"
+                    ><i class="fab fa-linkedin-in"></i
+                  ></a>
+                  <a href="#" aria-label="X"
+                    ><i class="fab fa-x-twitter"></i
+                  ></a>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="footer-bottom">
+            <span>Copyright © 2025 — TechieBears</span>
+          </div>
+        </footer>
+        <!-- section 8 end -->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+        <script src="https://unpkg.com/scrollreveal"></script>
+        <script src="js/script.js"></script>
+        <script src="js/portfolio-script.js"></script>
+      </body>
+    </html>
+  </head>
+</html>
