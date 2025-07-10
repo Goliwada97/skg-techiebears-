@@ -20,7 +20,7 @@ html, body {
   width: 100%;
   box-shadow: 0 4px 24px rgba(44, 62, 80, 0.10);
   backdrop-filter: blur(8px);
-  /* border-radius: 0 0 18px 18px; */
+ 
   transition: background 0.3s, box-shadow 0.3s;
   padding: 0.5rem 2rem;
 }
@@ -1637,6 +1637,9 @@ li.breadcrumb-separator {
 .contact-hero{
   background-image: url("../images/contact-banner.webp");
 } 
+.portfolio-detail-banner{
+   background-image: url("../images/portfolio.jpg") !important;
+}
 /* banner-end */
 /* form-start */
 .contact-section {
@@ -3143,11 +3146,12 @@ li.breadcrumb-separator {
 
 /* Hero Section */
 .hero {
-    min-height: 100vh;
+    min-height: auto;
     display: flex;
     align-items: center;
     position: relative;
     overflow: hidden;
+    flex-direction: column;
 }
 
 .hero-content {
@@ -3160,6 +3164,7 @@ li.breadcrumb-separator {
     margin-bottom: 1rem;
     opacity: 0;
     animation: fadeInUp 1s ease forwards;
+    color: #fff;
 }
 
 .hero .subtitle {
@@ -3224,7 +3229,6 @@ li.breadcrumb-separator {
     margin-bottom: 15px;
     background: var(--primary-gradient);
     -webkit-background-clip: text;
-    /* -webkit-text-fill-color: transparent; */
     background-clip: text;
 }
 
@@ -3236,7 +3240,7 @@ li.breadcrumb-separator {
 }
 
 /* Portfolio Cards */
-.portfolio-card {
+/* .portfolio-card {
     background: var(--card-bg);
     border: 1px solid var(--border-color);
     border-radius: 20px;
@@ -3321,9 +3325,9 @@ li.breadcrumb-separator {
     font-size: 0.85rem;
     font-weight: 500;
     border: 1px solid rgba(255, 107, 53, 0.2);
-}
+} */
 /* Stats Section */
-.stats {
+/* .stats {
     background: var(--card-bg);
     border: 1px solid var(--border-color);
     border-radius: 20px;
@@ -3343,7 +3347,7 @@ li.breadcrumb-separator {
     font-weight: 700;
     background: var(--primary-gradient);
     -webkit-background-clip: text;
-    /* -webkit-text-fill-color: transparent; */
+   
     background-clip: text;
     display: block;
 }
@@ -3353,7 +3357,7 @@ li.breadcrumb-separator {
     font-weight: 500;
     text-transform: uppercase;
     letter-spacing: 1px;
-}
+} */
 
 /* Contact Section */
 .contact {
@@ -3656,3 +3660,365 @@ li.breadcrumb-separator {
   color: #555;
 }
 /* single blog section end */
+
+
+/******************************************* Portfolio new page code MG **************************************/
+
+    .cs-py-5rem {
+      padding: 90px 0;
+    }
+
+
+
+    .cs-card-wrapper {
+      position: relative;
+      height: 350px;
+      overflow: hidden;
+      border-radius: 20px;
+      cursor: pointer;
+      opacity: 0;
+      transform: translateY(20px);
+      animation: fadeInUp 0.8s ease forwards;
+    }
+
+    @keyframes fadeInUp {
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .cs-card-wrapper img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.5s ease;
+    }
+
+    .cs-card-wrapper:hover img {
+      transform: scale(1.08);
+    }
+
+    .cs-card-wrapper::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(to top, rgba(0, 0, 0, 0.8), transparent 70%);
+      z-index: 1;
+      transition: 0.4s ease;
+    }
+
+    .cs-card-wrapper:hover::before {
+      background: linear-gradient(to top, #000, #00000047 60%);
+    }
+
+    .cs-card-category {
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      background: #fff;
+      border: 1px solid rgba(0, 0, 0, 0.24);
+      color: #000;
+      padding: 6px 16px;
+      border-radius: 50px;
+      font-size: 13px;
+      font-family: 'Poppins', sans-serif;
+      z-index: 2;
+      transition: all 0.3s ease;
+    }
+
+    .cs-card-wrapper:hover .cs-card-category {
+      background: #ffffff94;
+      border-color: #f5f5f5;
+    }
+
+    .cs-card-content {
+      position: absolute;
+      bottom: 20px;
+      left: 20px;
+      right: 20px;
+      z-index: 2;
+      text-align: left;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .cs-card-title {
+      font-size: 28px;
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      transform: translateY(60px);
+      transition: transform 0.4s ease;
+      margin-bottom: 45px;
+      color: #fff;
+    }
+
+    .cs-card-desc {
+      font-size: 13px;
+      color: #ddd;
+      opacity: 0;
+      transform: translateY(20px);
+      transition: all 0.4s ease;
+      margin: 0;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    .cs-card-wrapper:hover .cs-card-title {
+      transform: translateY(0);
+      margin-bottom: 0;
+    }
+
+    .cs-card-wrapper:hover .cs-card-desc {
+      opacity: 1;
+      transform: translateY(0);
+      margin: 10px 0;
+    }
+
+    .cs-arrow-circle {
+      width: 45px;
+      height: 45px;
+      border-radius: 50%;
+      border: 1px solid rgba(255, 255, 255, 0.3);
+      background: transparent;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 18px;
+      z-index: 2;
+      transition: 0.3s;
+      text-decoration: none;
+      color: #fff;
+      transform: rotate(-45deg);
+    }
+
+  .cs-card-wrapper:hover  .cs-arrow-circle {
+      background: linear-gradient(269.43deg, #EE2425 0.43%, #FAA239 99.45%);
+      border-color: #F15A24;
+      transform: rotate(0deg);
+    }
+
+    .cs-pagination button {
+      padding: 8px 14px;
+      background: transparent;
+      border: 1px solid #f26522;
+      color: #000;
+      border-radius: 6px;
+      font-size: 14px;
+      cursor: pointer;
+      font-family: 'Poppins', sans-serif;
+      transition: 0.3s;
+    }
+
+    .cs-pagination button:hover {
+      background: #f26522;
+      color: white;
+    }
+
+    .cs-pagination .active {
+      background: #f26522;
+      color: white;
+      pointer-events: none;
+    }
+
+
+    /********************* end Portfolio main page  ****************************/
+    /********************* start Portfolio deatail page  ****************************/
+    .first-section-cont{
+      padding-bottom:0 !important ;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+    }
+
+    .gradient-text {
+      background: linear-gradient(45deg, #EE2425, #FAA239);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      font-weight: 700;
+    }
+
+    .hero-section {
+      background: url('./images/portfolio.jpg') no-repeat center center/cover;
+      height: 400px;
+    }
+
+    .section-label-port {
+      font-size: 14px;
+      color: #4bb1f7;
+      font-weight: bold;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+    }
+
+    .spiral-img {
+      width: 120px;
+      height: auto;
+    }
+
+    .swiper-slide img {
+      width: 100%;
+      height: 300px;
+      object-fit: cover;
+    }
+
+    .swiper-button-next,
+    .swiper-button-prev {
+      width: 50px;
+      height: 50px;
+      background: #fff;
+      border-radius: 50%;
+      color: #EE2425;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+      transition: all 0.3s ease;
+      margin-top: -25px;
+    }
+
+    .swiper-button-next:after,
+    .swiper-button-prev:after {
+      font-size: 18px;
+      font-weight: bold;
+    }
+
+    .swiper-button-next:hover,
+    .swiper-button-prev:hover {
+      background: #EE2425;
+      color: #fff;
+      transform: scale(1.1);
+    }
+
+    .swiper-pagination-bullet {
+      background: #EE2425;
+      opacity: 0.5;
+    }
+
+    .swiper-pagination-bullet-active {
+      background: #FAA239;
+      opacity: 1;
+    }
+
+    .info-card {
+      background: #f9f9f9;
+      border: 1px solid #ddd;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .info-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 0 10px rgba(238, 36, 37, 0.1);
+    }
+
+    .info-card .label {
+      font-size: 24px;
+      background: linear-gradient(45deg, #FAA239, #EE2425);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      font-weight: 600;
+    }
+
+    .challenge-title {
+      font-size: 48px;
+      font-weight: 700;
+      background: linear-gradient(45deg, #EE2425, #FAA239);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      position: sticky;
+      top: 100px;
+    }
+
+    .challenge .point {
+      position: relative;
+      padding-left: 30px;
+      margin-bottom: 20px;
+    }
+
+    .challenge .point::before {
+      content: "→";
+      position: absolute;
+      left: -19px;
+      top: -24px;
+      color: #FAA239;
+      font-size: 35px;
+    }
+
+    .result-cont-bg-img {
+      background: url('https://images.unsplash.com/photo-1557804506-669a67965ba0?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80') no-repeat center center/cover;
+      position: relative;
+    }
+
+    .result-cont-bg-img::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: rgba(0, 0, 0, 0.7);
+      z-index: 1;
+    }
+
+    .result-cont-bg-img > * {
+      position: relative;
+      z-index: 2;
+    }
+
+    .result-box {
+      background: #f9f9f9;
+      border: 1px solid #ddd;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .result-box:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 0 15px rgba(250, 162, 57, 0.2);
+    }
+
+    .result-box .icon {
+      font-size: 40px;
+      background: linear-gradient(45deg, #EE2425, #FAA239);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .result-box h3 {
+      background: linear-gradient(45deg, #EE2425, #FAA239);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .result-box p {
+      color: #444;
+    }
+
+    @keyframes fadeInDown {
+      from {
+        opacity: 0;
+        transform: translateY(-50px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @keyframes slideUp {
+      from {
+        opacity: 0;
+        transform: translateY(50px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .animated {
+      animation: slideUp 1s ease;
+    }
+
+    .hero-title {
+      animation: fadeInDown 1s ease;
+    }
+    /********************* end Portfolio deatail page  ****************************/
+
