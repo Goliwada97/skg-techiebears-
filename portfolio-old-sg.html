@@ -127,83 +127,164 @@
           </section>
         <!-- banner section end --> 
            <!-- Portfolio Section -->
-    <!-- <header class="cs-hero">
-    <h1>Our Latest Case Studies</h1>
-    <p>Explore how we've delivered digital solutions to transform businesses across various industries.</p>
-  </header> -->
-
-  <main class="container cs-py-5rem">
-    <section class="row g-4" id="cs-card-container" aria-label="Case Studies"></section>
-    <nav class="d-flex justify-content-center flex-wrap gap-2 mt-4 cs-pagination" id="cs-pagination" aria-label="Pagination"></nav>
-  </main>
-
-  <script>
-    const allCards = [
-      { title: 'Alexander Ostrovsky Academy Admin', category: 'Web application', desc: 'There are four while others may say eight.', img: 'images/project1.png', link: 'http://127.0.0.1:5500/portfolio_detail-mg.html' },
-      { title: 'Educatgenix', category: 'Traveling', desc: 'There are four while others may say eight.', img: 'images/project2.png', link: 'educatgenix.html' },
-      { title: 'UDare', category: 'Mobile applications', desc: 'There are four while others may say eight.', img: 'images/project3.png', link: 'foodocity.html' },
-      { title: 'Max Bazaar', category: 'Mobile applications', desc: 'AI in healthcare simplified.', img: 'images/project4.png', link: 'mediwell.html' },
-      { title: 'Alexander Ostrovsky Academy', category: 'Mobile applications/UI/UX Designs', desc: 'Remote learning solutions.', img: 'images/project5.png', link: 'educore.html' },
-      { title: 'Just Padel Website', category: 'Web application', desc: 'There are four while others may say eight.', img: 'images/project7.png', link: 'techzilla.html' },
-      { title: 'UI/UX Designs', category: 'Food App UI', desc: 'Explore with smart guides.', img: 'images/project6.png', link: 'travex.html' },
-      { title: 'FitasF', category: 'Web Application / Ecommerce Website', desc: 'There are four while others may say eight.', img: 'images/project8.png', link: 'cafecloud.html' },
-      { title: 'TechieBears HRMS', category: 'Web application', desc: 'Cybersecurity redefined.', img: 'images/projectimage13.png', link: 'securex.html' },
-      { title: 'Jhalak', category: 'Web application', desc: 'Sustainable tech for future.', img: 'images/projectimage12.png', link: 'greenhive.html' },
-      { title: 'E Commerce UI', category: 'UI/UX Designs', desc: 'There are four while others may say eight.', img: 'images/projectimage11.png', link: 'buildsmart.html' }
-    ];
-
-    let currentPage = 0;
-    const perPage = 9;
-
-    function renderCards() {
-      const container = document.getElementById('cs-card-container');
-      container.innerHTML = '';
-      const start = currentPage * perPage;
-      const end = start + perPage;
-      const cards = allCards.slice(start, end);
-      cards.forEach(card => {
-        container.innerHTML += `
-          <article class="col-lg-4 col-md-6">
-            <div class="cs-card-wrapper" role="link" tabindex="0">
-              <img src="${card.img}" alt="${card.title} Screenshot">
-              <div class="cs-card-category">${card.category}</div>
-              <div class="cs-card-content">
-                <h2 class="cs-card-title">${card.title}</h2>
-                ${card.desc ? `<p class="cs-card-desc">${card.desc}</p>` : '<p class="cs-card-desc visually-hidden"></p>'}
-                <a href="${card.link}" class="cs-arrow-circle" title="Read more about ${card.title}">→</a>
+    <section id="portfolio" class="section">
+      <div class="container">
+          <div class="section-title fade-in">
+              <h2>Our Portfolio</h2>
+              <p>Discover our diverse range of digital solutions crafted with precision and innovation</p>
+          </div>
+          
+          <div class="row">
+              <div class="col-lg-4 col-md-6">
+                  <div class="portfolio-card">
+                      <div class="portfolio-icon">
+                          <i class="fas fa-shopping-cart"></i>
+                      </div>
+                      <h3>E-commerce Solutions</h3>
+                      <p>Comprehensive online stores with seamless user experience, secure payment gateways, and advanced inventory management.</p>
+                      <div class="tech-tags">
+                          <span class="tech-tag">React</span>
+                          <span class="tech-tag">Node.js</span>
+                          <span class="tech-tag">MongoDB</span>
+                          <span class="tech-tag">Stripe</span>
+                      </div>
+                  </div>
               </div>
-            </div>
-          </article>
-        `;
-      });
-    }
+              
+              <div class="col-lg-4 col-md-6">
+                  <div class="portfolio-card">
+                      <div class="portfolio-icon">
+                          <i class="fas fa-globe"></i>
+                      </div>
+                      <h3>Web Applications</h3>
+                      <p>Custom web applications built with modern technologies, responsive design, and scalable architecture.</p>
+                      <div class="tech-tags">
+                          <span class="tech-tag">Vue.js</span>
+                          <span class="tech-tag">Laravel</span>
+                          <span class="tech-tag">PostgreSQL</span>
+                          <span class="tech-tag">AWS</span>
+                      </div>
+                  </div>
+              </div>
+              
+              <div class="col-lg-4 col-md-6">
+                  <div class="portfolio-card">
+                      <div class="portfolio-icon">
+                          <i class="fas fa-calendar-alt"></i>
+                      </div>
+                      <h3>Booking Systems</h3>
+                      <p>Intelligent booking and reservation systems with real-time availability, automated notifications, and analytics.</p>
+                      <div class="tech-tags">
+                          <span class="tech-tag">Angular</span>
+                          <span class="tech-tag">Express.js</span>
+                          <span class="tech-tag">MySQL</span>
+                          <span class="tech-tag">Socket.io</span>
+                      </div>
+                  </div>
+              </div>
+              
+              <div class="col-lg-4 col-md-6">
+                  <div class="portfolio-card">
+                      <div class="portfolio-icon">
+                          <i class="fas fa-mobile-alt"></i>
+                      </div>
+                      <h3>Mobile Applications</h3>
+                      <p>Native and cross-platform mobile apps with intuitive interfaces, optimal performance, and seamless integration.</p>
+                      <div class="tech-tags">
+                          <span class="tech-tag">React Native</span>
+                          <span class="tech-tag">Flutter</span>
+                          <span class="tech-tag">Firebase</span>
+                          <span class="tech-tag">Redux</span>
+                      </div>
+                  </div>
+              </div>
+              
+              <div class="col-lg-4 col-md-6">
+                  <div class="portfolio-card">
+                      <div class="portfolio-icon">
+                          <i class="fas fa-paint-brush"></i>
+                      </div>
+                      <h3>UI/UX Design</h3>
+                      <p>User-centered design solutions that combine aesthetics with functionality, creating memorable digital experiences.</p>
+                      <div class="tech-tags">
+                          <span class="tech-tag">Figma</span>
+                          <span class="tech-tag">Adobe XD</span>
+                          <span class="tech-tag">Sketch</span>
+                          <span class="tech-tag">Prototyping</span>
+                      </div>
+                  </div>
+              </div>
+              
+              <div class="col-lg-4 col-md-6">
+                  <div class="portfolio-card">
+                      <div class="portfolio-icon">
+                          <i class="fas fa-boxes"></i>
+                      </div>
+                      <h3>Inventory Management</h3>
+                      <p>Powerful inventory tracking systems with real-time monitoring, automated alerts, and comprehensive reporting.</p>
+                      <div class="tech-tags">
+                          <span class="tech-tag">Python</span>
+                          <span class="tech-tag">Django</span>
+                          <span class="tech-tag">Redis</span>
+                          <span class="tech-tag">Charts.js</span>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </section>
 
-    function renderPagination() {
-      const totalPages = Math.ceil(allCards.length / perPage);
-      const pagination = document.getElementById('cs-pagination');
-      pagination.innerHTML = '';
-      pagination.innerHTML += `<button onclick="changePage(${currentPage - 1})" ${currentPage === 0 ? 'disabled' : ''} aria-label="Previous Page">Prev</button>`;
-      for (let i = 0; i < totalPages; i++) {
-        pagination.innerHTML += `<button class="${i === currentPage ? 'active' : ''}" onclick="changePage(${i})" aria-label="Page ${i + 1}">${i + 1}</button>`;
-      }
-      pagination.innerHTML += `<button onclick="changePage(${currentPage + 1})" ${currentPage === totalPages - 1 ? 'disabled' : ''} aria-label="Next Page">Next</button>`;
-    }
+  <!-- Stats Section -->
+  <section id="about" class="section-stats">
+      <div class="container">
+          <div class="stats fade-in">
+              <div class="row">
+                  <div class="col-lg-3 col-md-6">
+                      <div class="stat-item">
+                          <span class="stat-number" data-count="150">0</span>
+                          <p class="stat-label">Projects Completed</p>
+                      </div>
+                  </div>
+                  <div class="col-lg-3 col-md-6">
+                      <div class="stat-item">
+                          <span class="stat-number" data-count="98">0</span>
+                          <p class="stat-label">Client Satisfaction</p>
+                      </div>
+                  </div>
+                  <div class="col-lg-3 col-md-6">
+                      <div class="stat-item">
+                          <span class="stat-number" data-count="24">0</span>
+                          <p class="stat-label">Support Hours</p>
+                      </div>
+                  </div>
+                  <div class="col-lg-3 col-md-6">
+                      <div class="stat-item">
+                          <span class="stat-number" data-count="5">0</span>
+                          <p class="stat-label">Years Experience</p>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </section>
 
-    function changePage(index) {
-      const totalPages = Math.ceil(allCards.length / perPage);
-      if (index >= 0 && index < totalPages) {
-        currentPage = index;
-        renderCards();
-        renderPagination();
-      }
-    }
-
-    renderCards();
-    renderPagination();
-  </script>
-
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
-</body>
+  <!-- Contact Section -->
+  <section id="contact" class="section">
+      <div class="container">
+          <div class="row justify-content-center">
+              <div class="col-lg-8">
+                  <div class="contact fade-in">
+                      <h2>Ready to Start Your Project?</h2>
+                      <p>Let's discuss how we can help bring your digital vision to life with our expertise and innovative solutions.</p>
+                      <a href="mailto:hello@techbears.com" class="cta-button">
+                          <i class="fas fa-envelope me-2"></i>
+                          Get In Touch
+                      </a>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </section>
         <!-- section 8 start -->
         <footer class="footer-section" aria-label="Footer">
           <div class="footer-main">
